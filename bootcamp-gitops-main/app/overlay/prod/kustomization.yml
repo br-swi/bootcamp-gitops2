@@ -4,7 +4,7 @@ resources:
   - ../../base/manifests
 
 patches:
-  - path: patch-configmap.yaml
+#  - path: patch-configmap.yaml
   - path: patch-route.yaml
 
 labels:
