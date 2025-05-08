@@ -12,7 +12,7 @@ labels:
       owner: user5
       app: bootcamp-prod
 
-nameSuffix: -prod-user-5
+#nameSuffix: -prod-user-5
 
 images:
   - name: quay.io/rabenschlag/bootcamp
