@@ -4,4 +4,4 @@ metadata:
   name: bootcamp-v5
 spec:
   to:
-    name: bootcamp-v5-prod-user-1  
+    name: bootcamp-v5
