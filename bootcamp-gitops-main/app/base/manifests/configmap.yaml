@@ -1,0 +1,8 @@
+kind: ConfigMap
+apiVersion: v1
+metadata:
+  name: bootcamp-config
+data:
+  MESSAGE: Ich freue mich auf die nächsten Tage!
+  NAME: Aliriza Tasdemir
+  ROLE: Trainer

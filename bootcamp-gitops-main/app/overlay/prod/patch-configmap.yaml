@@ -1,0 +1,9 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: bootcamp-config   # Der Name muss mit dem in der Base definierten Namen übereinstimmen
+data:
+  # Hier überschreibst du die Werte, die in der Produktionsumgebung gelten sollen.
+  MESSAGE: "Production: Neue Nachricht für Prod"
+  NAME: "User2 Production App"
+  ROLE: "Production Admin"

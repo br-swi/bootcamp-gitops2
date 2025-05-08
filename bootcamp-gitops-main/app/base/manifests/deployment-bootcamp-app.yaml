@@ -1,0 +1,45 @@
+kind: Deployment
+apiVersion: apps/v1
+metadata:
+  name: bootcamp-v2
+  labels:
+    app: bootcamp-v2
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: bootcamp-v2
+  template:
+    metadata:
+      labels:
+        app: bootcamp-v2
+        deployment: bootcamp-v2
+      annotations:
+        openshift.io/generated-by: OpenShiftWebConsole
+    spec:
+      containers:
+        - name: bootcamp-v2
+          image: 'quay.io/tasdemir/bootcamp-v2@sha256:7319e94076e3b28d1d8c9f99c798183b463b192d9f194f89d26eb71136b30b38'
+          ports:
+            - containerPort: 8080
+              protocol: TCP
+          envFrom:
+            - configMapRef:
+                name: bootcamp-config
+          resources: {}
+          terminationMessagePath: /dev/termination-log
+          terminationMessagePolicy: File
+          imagePullPolicy: Always
+      restartPolicy: Always
+      terminationGracePeriodSeconds: 30
+      dnsPolicy: ClusterFirst
+      securityContext: {}
+      schedulerName: default-scheduler
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxUnavailable: 25%
+      maxSurge: 25%
+  revisionHistoryLimit: 10
+  progressDeadlineSeconds: 600
+
