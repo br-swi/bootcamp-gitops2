@@ -9,13 +9,13 @@ patches:
 
 labels:
   - pairs:
-      owner: user1
+      owner: user5
       app: bootcamp-prod
 
-nameSuffix: -prod-user-1
+nameSuffix: -prod-user-5
 
 images:
-  - name: quay.io/tasdemir/bootcamp-v2
-    newName: quay.io/tasdemir/bootcamp-v2
-    newTag: v1
+  - name: quay.io/rabenschlag/bootcamp
+    newName: quay.io/rabenschlag/bootcamp
+    newTag: prod
       
