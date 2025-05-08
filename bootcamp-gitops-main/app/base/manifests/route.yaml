@@ -1,13 +1,13 @@
 kind: Route
 apiVersion: route.openshift.io/v1
 metadata:
-  name: bootcamp-v2
+  name: bootcamp-v5
   labels:
-    app: bootcamp-v2
+    app: bootcamp-v5
 spec:
   to:
     kind: Service
-    name: bootcamp-v2
+    name: bootcamp-v5
     weight: 100
   port:
     targetPort: 8080-tcp
