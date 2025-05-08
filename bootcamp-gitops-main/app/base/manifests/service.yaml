@@ -1,9 +1,9 @@
 kind: Service
 apiVersion: v1
 metadata:
-  name: bootcamp-v2
+  name: bootcamp-v5
   labels:
-    app: bootcamp-v2
+    app: bootcamp-v5
 spec:
   ports:
     - name: 8080-tcp
@@ -11,6 +11,6 @@ spec:
       port: 8080
       targetPort: 8080
   selector:
-    app: bootcamp-v2
-    deployment: bootcamp-v2
+    app: bootcamp-v5
+    deployment: bootcamp-v5
 
