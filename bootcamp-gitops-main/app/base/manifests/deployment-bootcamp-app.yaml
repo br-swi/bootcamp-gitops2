@@ -3,16 +3,16 @@ apiVersion: apps/v1
 metadata:
   name: bootcamp-v2
   labels:
-    app: bootcamp-v2
+    app: bootcamp-v5
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: bootcamp-v2
+      app: bootcamp-v5
   template:
     metadata:
       labels:
-        app: bootcamp-v2
+        app: bootcamp-v5
         deployment: bootcamp-v2
       annotations:
         openshift.io/generated-by: OpenShiftWebConsole
